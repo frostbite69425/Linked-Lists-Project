@@ -1,0 +1,25 @@
+{
+  "name": "linked-lists-project",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/frostbite69425/Linked-Lists-Project#readme",
+  "bugs": {
+    "url": "https://github.com/frostbite69425/Linked-Lists-Project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frostbite69425/Linked-Lists-Project.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watch .js"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.5",
+    "jest": "^30.4.2"
+  }
+}
