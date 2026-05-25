@@ -122,7 +122,7 @@ class LinkedList {
 
   insertAt(index, ...values) {
     const listSize = this.size();
-    if (index === 0 || index > listSize - 1) {
+    if (index <= 0 || index > listSize - 1) {
       throw new RangeError();
     } else {
       let current = this.headNode;
@@ -137,6 +137,22 @@ class LinkedList {
         current.nextNode = currentValueNode;
         current = current.nextNode;
       }
+      current.nextNode = detachedNode;
+    }
+  }
+
+  removeAt(index) {
+    const listSize = this.size();
+    if (index <= 0 || index >= listSize) {
+      throw new RangeError();
+    } else {
+      let i = 0;
+      let current = this.headNode;
+      while (i !== index - 1) {
+        current = current.nextNode;
+        i++;
+      }
+      const detachedNode = current.nextNode.nextNode;
       current.nextNode = detachedNode;
     }
   }

@@ -119,10 +119,33 @@ describe("LinkedList tests", () => {
   });
 
   test("insertAt(index, ...values) throws a RangeError if the method is called with an index that is out of bounds.", () => {
-    expect(indexList.insertAt(500, 7, 8, 9)).toThrow(new RangeError());
+    expect(() => {
+      indexList.insertAt(500, 7, 8, 9);
+    }).toThrow(new RangeError());
   });
 
   test("insertAt(index, ...values) throws a RangeError if the method is called with an index of 0.", () => {
-    expect(insertTestList.insertAt(0, 7, 8, 9)).toThrow(new RangeError());
+    expect(() => {
+      insertTestList.insertAt(0, 7, 8, 9);
+    }).toThrow(new RangeError());
+  });
+
+  test("removeAt(index) removes the  node at the given index.", () => {
+    insertTestList.removeAt(2);
+    expect(insertTestList.toString()).toBe(
+      "(0) -> (1) -> (7) -> (8) -> (9) -> (3) -> (4) -> (5) -> null",
+    );
+  });
+
+  test("removeAt(index) throws a RangeError if the method is called with an index that is out of bounds.", () => {
+    expect(() => {
+      indexList.removeAt(500);
+    }).toThrow(new RangeError());
+  });
+
+  test("removeAt(index) throws a RangeError if the method is called with an index of 0.", () => {
+    expect(() => {
+      insertTestList.removeAt(0);
+    }).toThrow(new RangeError());
   });
 });
