@@ -114,7 +114,7 @@ describe("LinkedList tests", () => {
   test("insertAt(index, ...values) inserts new nodes with the given values at the given index.", () => {
     insertTestList.insertAt(2, 7, 8, 9);
     expect(insertTestList.toString()).toBe(
-      "(0) -> (1) -> (2) -> (7) -> (8) -> (9) -> (3) -> (4) -> (5) -> null",
+      "(0) -> (1) -> (7) -> (8) -> (9) -> (2) -> (3) -> (4) -> (5) -> null",
     );
   });
 
@@ -133,7 +133,7 @@ describe("LinkedList tests", () => {
   test("removeAt(index) removes the  node at the given index.", () => {
     insertTestList.removeAt(2);
     expect(insertTestList.toString()).toBe(
-      "(0) -> (1) -> (7) -> (8) -> (9) -> (3) -> (4) -> (5) -> null",
+      "(0) -> (1) -> (8) -> (9) -> (2) -> (3) -> (4) -> (5) -> null",
     );
   });
 

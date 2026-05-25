@@ -127,7 +127,7 @@ class LinkedList {
     } else {
       let current = this.headNode;
       let i = 0;
-      while (i !== index) {
+      while (i < index - 1) {
         current = current.nextNode;
         i++;
       }
