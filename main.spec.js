@@ -124,9 +124,9 @@ describe("LinkedList tests", () => {
     }).toThrow(new RangeError());
   });
 
-  test("insertAt(index, ...values) throws a RangeError if the method is called with an index of 0.", () => {
+  test("insertAt(index, ...values) throws a RangeError if the method is called with an index below 0.", () => {
     expect(() => {
-      insertTestList.insertAt(0, 7, 8, 9);
+      insertTestList.insertAt(-2, 7, 8, 9);
     }).toThrow(new RangeError());
   });
 
@@ -143,9 +143,9 @@ describe("LinkedList tests", () => {
     }).toThrow(new RangeError());
   });
 
-  test("removeAt(index) throws a RangeError if the method is called with an index of 0.", () => {
+  test("removeAt(index) throws a RangeError if the method is called with an index below 0.", () => {
     expect(() => {
-      insertTestList.removeAt(0);
+      insertTestList.removeAt(-2);
     }).toThrow(new RangeError());
   });
 });
