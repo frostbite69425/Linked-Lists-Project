@@ -148,6 +148,10 @@ class LinkedList {
     } else {
       let i = 0;
       let current = this.headNode;
+      if (index == 0) {
+        this.headNode = current.nextNode;
+        return;
+      }
       while (i !== index - 1) {
         current = current.nextNode;
         i++;
